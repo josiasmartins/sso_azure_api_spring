@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: SSO_azure
+  security:
+    oauth2:
+      client:
+        provider:
+          azure:
+            issuer-uri: https://login.microsoftonline.com/9d64dfab-644d-4ee5-9620-934b52f48ab5/v2.0
+        registration:
+          azure-dev:
+            provider: azure
+            client-id: 425cae19-a568-407c-a25f-91f7fb243070
+            client-secret: usI8Q~BzR9MjZ-mGtq9RSfM1ta5KFf~dLaW1TaZZ
+            scope:
+              - openid
+              - email
+              - profile
+              -
+logging:
+  level:
+    org.springframework.security: DEBUG
