@@ -1,23 +1,4 @@
 package com.josiasmartins.SSO_azure;
-//
-//import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
-//import org.springframework.security.config.annotation.web.builders.WebSecurity;
-//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration;
-//import org.springframework.security.web.firewall.StrictHttpFirewall;
-//
-//import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
-//
-//
-//public class CustomConfig extends WebSecurityConfigurerAdapter {
-//
-//    @Override
-//    public void configure(WebSecurity web) throws Exception {
-//        StrictHttpFirewall firewall = new StrictHttpFirewall();
-//        //configure the firewall instance....
-//        web.httpFirewall(firewall);
-//    }
-//
-//}
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
