@@ -1,22 +1,15 @@
 spring:
   security:
     oauth2:
-      client:
-        registration:
-          microsoft: # Altere o nome para microsoft
-            client-id: 425cae19-a568-407c-a25f-91f7fb243070
-            client-secret: usI8Q~BzR9MjZ-mGtq9RSfM1ta5KFf~dLaW1TaZZ
-            scope:
-            - openid
-            - profile
-            - email
-            authorization-grant-type: authorization_code
-            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
-        provider:
-          microsoft:
-            issuer-uri: https://login.microsoftonline.com/9d64dfab-644d-4ee5-9620-934b52f48ab5/v2.0
+      resourceserver:
+        jwt:
+          issuer-uri: https://login.microsoftonline.com/9d64dfab-644d-4ee5-9620-934b52f48ab5
+#          issuer-uri: https://login.microsoftonline.com/9d64dfab-644d-4ee5-9620-934b52f48ab5/v2.0/.well-known/openid-configuration
+#          jwk-set-uri: https://login.microsoftonline.com/9d64dfab-644d-4ee5-9620-934b52f48ab5/discovery/v2.0/keys
+          audience: api://425cae19-a568-407c-a25f-91f7fb243070/access_as_user
 
 
 logging:
   level:
     org.springframework.security: DEBUG
+    org.springframework.security.oauth2.server.resource: DEBUG
